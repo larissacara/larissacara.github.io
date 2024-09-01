@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Sophia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="IMG/logo.png" alt="Logo da Empresa" style="height: 60px;">
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Aulas</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    
+    <header id="home">
+        <div class="titulo">
+            <div><h1>Teacher Sophia</h1>
+            <p>Cursos de inglês adaptados ao seu nível e necessidades. Aprenda com uma professora qualificada e melhore sua comunicação.</p></div>
+            <div class="image">
+                <img src="IMG/professora.png" style="width: 80%;"></div>
+        </div>
+    </header>
+
+    <section id="sobre">
+        <div class="sobre">
+            <div>
+                <h1>TRANSFORME SUA FLUÊNCIA COM CURSOS PERSONALIZADOS</h1>
+            </div>
+            <div>
+                <h3>PRATICIDADE</h3>
+                <p>Cursos online para todos os níveis, com horários flexíveis e materiais desenvolvidos para te ajudar a alcançar a fluência no inglês.</p>
+                <h3>SUPORTE</h3>
+                <p>Durante toda a sua trajetória de aprendizado você poderá contar com um atendimento único e a possibilidade de alterar o seu plano de estudos sempre quando necessário.</p>
+            </div>
+        </div>    
+    </section>
+
+    <section id="servicos">
+        <h1>AULAS</h1>
+        <div class="aulas">
+            <div><h2>Aulas individuais</h2>
+            <img src="IMG/curso1.png" style="width: 100%;"></div>
+            <div><h2>Preparatório para exames</h2>
+            <img src="IMG/curso2.png" style="width: 100%;"></div>
+            <div><h2>Aulas em grupo</h2>
+            <img src="IMG/curso3.png" style="width: 100%;"></div>
+        </div>
+    </section>
+
+    <section id="depoimentos">
+        <h1>DEPOIMENTOS</h1>
+        <div class="depoimentos">
+            <div><img src="IMG/aluno1.png" style="width: 80%;"></div>
+            <div><img src="IMG/aluno2.png" style="width: 80%;"></div>
+            <div><img src="IMG/aluno3.png" style="width: 80%;"></div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <h1>CONTATO</h1>
+        <p>Entre em contato através do formulário abaixo e agende uma aula experimental ou acesse minhas redes sociais.</p>
+        <div class="social-media">
+            <a href="https://www.instagram.com/yourusername" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/yourusername" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <form class="registration-form">
+            <h2>Formulário de Inscrição</h2>
+            <div class="form-group">
+                <div>
+                    <label for="fullName">Nome Completo:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div>
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="course">Curso de Interesse:</label>
+                    <select id="course" name="course">
+                    <option value="VIP">Aula individual</option>
+                    <option value="Grupo">Aula em grupo</option>
+                    <option value="Exame">Preparatório para exame</option>
+                </select>
+                </div>
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
+            </div>
+        </form>
+        <p>Site desenvolvido com propósitos pedagógicos sem fins comerciais.</p>
+    </footer>
+</body>
+<script>
+    function toggleMenu() {
+        var navLinks = document.getElementById('navLinks');
+        if (navLinks.style.display === 'block') {
+            navLinks.style.display = 'none';
+        } else {
+            navLinks.style.display = 'block';
+        }
+       
+        document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function() {
+        var navLinks = document.getElementById('navLinks');
+        navLinks.style.display = 'none'; // Esconde o menu após o clique
+    });
+});
+}
+    </script>    
+</html>
